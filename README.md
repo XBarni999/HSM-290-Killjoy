@@ -1,4 +1,4 @@
-# Kh-47M2 Kinzhal
+# HSM-290 Killjoy
 
 An air-launched aeroballistic missile mod for **Nuclear Option**, built with Blueprinter and a BepInEx runtime plugin.
 
