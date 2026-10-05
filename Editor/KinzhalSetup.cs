@@ -164,7 +164,8 @@ public static class KinzhalSetup
             Edit(mount,s=>{P(s,"jsonKey").stringValue=name;P(s,"mountName").stringValue="Killjoy "+(nuclear?"Nuclear":"HE")+(twin?" (internal)":"");P(s,"prefab").objectReferenceValue=Load<GameObject>(R+name+".prefab");P(s,"info").objectReferenceValue=info;P(s,"ammo").intValue=1;P(s,"mass").floatValue=4300;P(s,"drag").floatValue=twin?0:1.8f;P(s,"disabled").boolValue=false;P(s,"missileBay").boolValue=twin;});
             if(!twin){
                 string path=R+"Op_Kinzhal"+suffix+"_Carriers.asset";var op=AssetDatabase.LoadAssetAtPath<OpAddWeaponToHardpoint>(path);if(!op){op=ScriptableObject.CreateInstance<OpAddWeaponToHardpoint>();AssetDatabase.CreateAsset(op,path);}op.weaponJsonKey=name;op.aircraft.Clear();
-                op.aircraft.Add(new OpAddWeaponToHardpoint.AircraftTarget{aircraftJsonKey="FastBomber1",hardpointIndices=new System.Collections.Generic.List<int>{3}});EditorUtility.SetDirty(op);
+                op.aircraft.Add(new OpAddWeaponToHardpoint.AircraftTarget{aircraftJsonKey="FastBomber1",hardpointIndices=new System.Collections.Generic.List<int>{3}});
+                op.aircraft.Add(new OpAddWeaponToHardpoint.AircraftTarget{aircraftJsonKey="Aryx_Interceptor1",hardpointIndices=new System.Collections.Generic.List<int>{1}});EditorUtility.SetDirty(op);
             }
             if(twin){
                 string path=R+"Op_"+name+".asset";var op=AssetDatabase.LoadAssetAtPath<OpAddWeaponToHardpoint>(path);if(!op){op=ScriptableObject.CreateInstance<OpAddWeaponToHardpoint>();AssetDatabase.CreateAsset(op,path);}op.weaponJsonKey=name;op.aircraft.Clear();
@@ -250,6 +251,7 @@ public static class KinzhalSetup
             if(darkManager.hardpointSets[1].hardpoints.Count+darkManager.hardpointSets[2].hardpoints.Count!=4||alkyon.hardpointSets[3].hardpoints.Count!=2)throw new Exception("Carrier ammunition counts differ");
             var op=Load<OpAddWeaponToHardpoint>(R+"Op_Kinzhal_"+suffix+"_Carriers.asset");
             if(!op.aircraft.Single(a=>a.aircraftJsonKey=="FastBomber1").hardpointIndices.SequenceEqual(new[]{3}))throw new Exception("Incorrect carrier slots");
+            if(!op.aircraft.Single(a=>a.aircraftJsonKey=="Aryx_Interceptor1").hardpointIndices.SequenceEqual(new[]{1}))throw new Exception("Incorrect Eclipse centreline slot");
         }
         foreach(var field in new[]{"pierceDamage","aimPoint"})if(typeof(Missile).GetField(field,System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.NonPublic)==null)throw new Exception("Runtime field missing: "+field);
         foreach(var method in new[]{"Initialize","Seek"})if(typeof(BallisticMissileGuidance).GetMethod(method)==null)throw new Exception("Runtime method missing: "+method);

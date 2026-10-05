@@ -24,7 +24,7 @@ MonoBehaviour:
     antiMissile: 0
     antiRadar: 0
   jsonKey: Kh47M2_HE
-  unitName: HSM-290 "Killjoy" (HE)
+  unitName: HSM-290 Killjoy (HE)
   bogeyName: Killjoy
   description: Heavy air-launched two-stage aeroballistic missile. Range depends
     on launch altitude and speed; no minimum release altitude. Boost, guided coast
@@ -39,7 +39,7 @@ MonoBehaviour:
   mapOrient: 1
   IsObstacle: 1
   iconSize: 0.5
-  mapIconSize: 0.5
+  mapIconSize: 0.8
   captureCapacity: 0
   captureStrength: 0
   captureDefense: 0

@@ -16,3 +16,5 @@ MonoBehaviour:
   aircraft:
   - aircraftJsonKey: FastBomber1
     hardpointIndices: 03000000
+  - aircraftJsonKey: Aryx_Interceptor1
+    hardpointIndices: 01000000

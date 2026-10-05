@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.2.0 — 2026-10-05
+
+- Removed quotation marks from the HSM-290 Killjoy name in-game.
+- Increased the missile icon size on the map for better visibility.
+- Added HE and nuclear missile support on the FS-41 Eclipse central pylon.
+
 ## v1.1.0 — 2026-10-05
 
 First public release of HSM-290 "Killjoy".

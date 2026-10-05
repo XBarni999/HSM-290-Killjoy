@@ -7,7 +7,7 @@ using BepInEx;
 
 namespace Kinzhal
 {
-    [BepInPlugin("ua.ncmod.kh47m2", "HSM-290 \"Killjoy\"", "1.1.0")]
+    [BepInPlugin("ua.ncmod.kh47m2", "HSM-290 Killjoy", "1.2.0")]
     [BepInDependency("com.nikkorap.blueprinter", "2.0.1")]
     public sealed class Plugin : BaseUnityPlugin
     {

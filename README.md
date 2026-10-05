@@ -1,4 +1,4 @@
-# HSM-290 "Killjoy"
+# HSM-290 Killjoy
 
 An air-launched, two-stage aeroballistic missile for **Nuclear Option 0.34.1**. Killjoy combines a solid-fuel booster with an unpowered guided warhead for long-range attacks on ground and surface targets.
 
@@ -9,6 +9,7 @@ An air-launched, two-stage aeroballistic missile for **Nuclear Option 0.34.1**. 
 - **Ballistic guidance:** a moderate loft followed by an angled dive. Terminal guidance prioritizes the impact point and accounts for velocity, gravity and target movement.
 - **Altitude-dependent range:** launching from a higher carrier increases the configured launch range, up to **360 km at 10 km altitude**. Minimum launch range is **48 km**.
 - **Animated warhead fins:** four fins unfold after separation and deflect with steering commands.
+- **FS-41 Eclipse:** HE and nuclear variants are available on its central pylon (requires the Eclipse aircraft mod).
 - **Carrier support:** KR-67 Ifrit carries **1** missile on a custom central heavy pylon; Alkyon AB-4 carries **2** externally; SFB-81 Darkreach carries **4** in its normal internal bays.
 - **Native impact and damage:** contact checks exclude the missile's own colliders and trigger volumes, and cover movement between physics steps. The game's damage, penetration and fuse logic handles valid impacts.
 
