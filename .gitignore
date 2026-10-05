@@ -1,0 +1,9 @@
+**/bin/
+**/obj/
+Delivery~/
+Validation~/
+Tools~/Runtime/Kinzhal/Bundle/
+*.nobp
+*.dll
+*.zip
+*.log
