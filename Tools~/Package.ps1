@@ -4,7 +4,7 @@ $runtimeRoot = Join-Path $PSScriptRoot 'Runtime\Kinzhal'
 $runtimeDll = Join-Path $runtimeRoot 'bin\Release\net472\HSM-290-Killjoy.dll'
 $bundlePath = Join-Path $runtimeRoot 'Bundle\Kh47M2.nobp'
 $deliveryRoot = Join-Path $modRoot 'Delivery~'
-$version = (Get-Content -LiteralPath (Join-Path $modRoot 'modinfo.json') -Raw | ConvertFrom-Json).version
+$version = ([xml](Get-Content -LiteralPath (Join-Path $runtimeRoot 'Kinzhal.csproj') -Raw)).Project.PropertyGroup.Version
 if (!(Test-Path -LiteralPath $runtimeDll) -or !(Test-Path -LiteralPath $bundlePath)) { throw 'Build the Blueprinter bundle and Release DLL first.' }
 $assembly = [Reflection.Assembly]::Load([IO.File]::ReadAllBytes($runtimeDll))
 $stream = $assembly.GetManifestResourceStream('Kinzhal.Kh47M2.nobp')

@@ -7,3 +7,24 @@ Tools~/Runtime/Kinzhal/Bundle/
 *.dll
 *.zip
 *.log
+
+ # Unity assets remain local; this repository publishes source code only.
+*.asset
+*.meta
+*.prefab
+*.anim
+*.png
+*.fbx
+*.obj
+*.mtl
+*.mat
+*.asmdef
+modinfo.json
+*.cs.txt
+*.bak
+Tools~/AssetArchive*/
+Tools~/RuntimeArchive*/
+Tools~/RadarParamsDump/
+Tools~/fix-*.py
+Tools~/*.py
+Tools~/*.json
