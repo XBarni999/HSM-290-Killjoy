@@ -1,6 +1,6 @@
 # HSM-290 Killjoy
 
-An air-launched, two-stage aeroballistic missile for **Nuclear Option 0.34.1**. Killjoy combines a solid-fuel booster with an unpowered guided warhead for long-range attacks on ground and surface targets.
+An air-launched, two-stage aeroballistic missile for **Nuclear Option 0.34.2**. Killjoy combines a solid-fuel booster with an unpowered guided warhead for long-range attacks on ground and surface targets.
 
 ## Features
 
@@ -42,9 +42,11 @@ See [CHANGELOG.md](CHANGELOG.md) for the release features.
 ## Building from source
 
 Place this repository at `Assets/Blueprinter/Mods/Kh47M2` in a configured Blueprinter Editor project. The internal folder and asset IDs retain the Kh47M2/Kinzhal names for compatibility.
-
 1. In Unity, select **Blueprinter > HSM-290 Killjoy > Build bundle**.
 2. Build `Tools~/Runtime/Kinzhal/Kinzhal.csproj` in Release mode, adjusting game/assembly paths for your installation.
+
+
+This project is an unofficial community modification and is not affiliated with, sponsored by, or endorsed by Shockfront Studios Pty Ltd. Original Nuclear Option assets, vehicle designs, audio, and code are Copyright (c) 2026 Shockfront Studios Pty Ltd. All rights reserved. Nuclear Option and Shockfront Studios are trademarks or registered trademarks of Shockfront Studios Pty Ltd. Original mod content and all other trademarks belong to their respective owners.
 3. Run `Tools~/Package.ps1` to verify the embedded bundle and prepare the DLL and ZIP.
 
 Original game assemblies and donor assets are required locally and are not included. **Create or update assets** regenerates content; use **Build bundle** to package the existing tuned assets.
