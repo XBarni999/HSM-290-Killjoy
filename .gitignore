@@ -2,7 +2,7 @@
 **/obj/
 Delivery~/
 Validation~/
-Tools~/Runtime/Kinzhal/Bundle/
+Runtime/Kinzhal/Bundle/
 *.nobp
 *.dll
 *.zip

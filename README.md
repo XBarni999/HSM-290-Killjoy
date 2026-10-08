@@ -41,14 +41,12 @@ See [CHANGELOG.md](CHANGELOG.md) for the release features.
 
 ## Building from source
 
-This repository contains the runtime and editor source code. Unity assets, models, textures and `.meta` files are kept in the local authoring project and are not included here. Download the complete ready-to-use mod from Releases.
+This repository contains runtime source and documentation. Unity assets, models, textures and metadata are kept in the authoring project. Download the complete playable mod from Releases.
 
-To compile the runtime DLL:
+1. Place a prepared Blueprinter bundle at `Runtime/Kinzhal/Bundle/Kh47M2.nobp`. The `Kinzhal.Kh47M2.nobp` embedded resource from the corresponding release DLL can also be reused.
+2. Adjust the game/assembly reference paths in `Runtime/Kinzhal/Kinzhal.csproj` for your installation.
+3. Run `dotnet build Runtime/Kinzhal/Kinzhal.csproj -c Release`.
 
-1. Place a prepared Blueprinter bundle at `Tools~/Runtime/Kinzhal/Bundle/Kh47M2.nobp`. You can also reuse the `Kinzhal.Kh47M2.nobp` embedded resource from the corresponding release DLL.
-2. Adjust the game/assembly reference paths in `Tools~/Runtime/Kinzhal/Kinzhal.csproj` for your installation and build it in Release mode.
-3. Run `Tools~/Package.ps1` to verify the embedded bundle and prepare the DLL and ZIP.
-
-The editor source requires a configured Blueprinter Editor project with the matching assets and game donors. The internal Kh47M2/Kinzhal IDs are retained for compatibility.
+The output is `Runtime/Kinzhal/bin/Release/net472/HSM-290-Killjoy.dll`. The internal Kh47M2/Kinzhal IDs are retained for compatibility.
 
 This project is an unofficial community modification and is not affiliated with, sponsored by, or endorsed by Shockfront Studios Pty Ltd. Original Nuclear Option assets, vehicle designs, audio, and code are Copyright (c) 2026 Shockfront Studios Pty Ltd. All rights reserved. Nuclear Option and Shockfront Studios are trademarks or registered trademarks of Shockfront Studios Pty Ltd. Original mod content and all other trademarks belong to their respective owners.
